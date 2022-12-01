@@ -9,7 +9,7 @@ module.exports.handler = (event, context, callback) => {
   if (!formData) {
     errorMessage = "No form data supplied";
     console.log(errorMessage);
-    callback(errorMessage);
+    return callback(errorMessage);
   }
 
   const email = formData.payload.email;
@@ -17,7 +17,7 @@ module.exports.handler = (event, context, callback) => {
   if (!email) {
     errorMessage = "No EMAIL supplied";
     console.log(errorMessage);
-    callback(errorMessage);
+    return callback(errorMessage);
   }
 
   const data = {
@@ -39,7 +39,7 @@ module.exports.handler = (event, context, callback) => {
     }
   }, (error, response, body) => {
     if (error) {
-      callback(error, null)
+      return callback(error, null)
     }
     const bodyObj = JSON.parse(body);
 
