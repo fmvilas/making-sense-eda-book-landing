@@ -12,9 +12,7 @@ module.exports.handler = (event, context, callback) => {
     callback(errorMessage);
   }
 
-  console.log(formData);
-
-  const email = formData.email;
+  const email = formData.payload.email;
 
   if (!email) {
     errorMessage = "No EMAIL supplied";
