@@ -36,7 +36,8 @@ export function Hero() {
               Get notified when the book is ready and <strong>receive a discount</strong>{' '}
               <span aria-hidden="true">&rarr;</span>
             </h3>
-            <form method='POST' data-netlify="true">
+            <form method="POST" name="hero-subscribe" data-netlify="true">
+              <input type="hidden" name="form-name" value="hero-subscribe" />
               <div className="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-2.5">
                 <div className="relative sm:static sm:flex-auto">
                   <input
