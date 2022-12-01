@@ -12,6 +12,8 @@ module.exports.handler = (event, context, callback) => {
     callback(errorMessage);
   }
 
+  console.log(formData);
+
   const email = formData.email;
 
   if (!email) {
