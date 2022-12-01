@@ -24,14 +24,14 @@ module.exports.handler = async (event) => {
     }
   }
 
-  console.log("Sending data to mailchimp");
-
   mailchimp.setConfig({
     apiKey: process.env.MAILCHIMP_API_KEY,
     server: "us12",
   });
 
   try {
+    console.log("Sending data to mailchimp");
+
     const response = await mailchimp.lists.addListMember("1082538", {
       email_address: email,
       status: "subscribed",
@@ -48,6 +48,7 @@ module.exports.handler = async (event) => {
       body: 'saved email'
     }
   } catch (e) {
+    console.error(e);
     return {
       statusCode: 400,
       body: e.message,
