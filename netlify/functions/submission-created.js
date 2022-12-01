@@ -32,7 +32,7 @@ module.exports.handler = async (event) => {
   try {
     console.log("Sending data to mailchimp");
 
-    const response = await mailchimp.lists.addListMember("1082538", {
+    const response = await mailchimp.lists.addListMember("41d4dd70bc", {
       email_address: email,
       status: "subscribed",
     });
