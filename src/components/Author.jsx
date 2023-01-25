@@ -57,7 +57,7 @@ export function Author() {
             </p>
             <p className="mt-8">
               <Link
-                href="https://asyncapi.social/@fmvilas"
+                href="https://social.fmvilas.me/@fran"
                 className="inline-flex items-center text-base font-medium tracking-tight text-blue-600"
                 target="_blank"
               >
